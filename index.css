@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    padding: 5px 0;
+    background-color: white;
+    border: 1px solid rgba(81, 79, 79, 0.1);
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 32px;
+    text-align: center;
+
+    &::first-letter {
+        color: red;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapped {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    order: 1;
+    margin-top: 20px;
+    width: 75%;    
+}
+
+.cats {
+    width: 440px;
+    height: 260px;
+    border: 1px solid rgba(99, 110, 109, 0.297);
+    margin: 5px;
+
+    &:hover{
+        box-shadow: -2px 3px 5px -3px rgba(0, 0, 0, 0.53);
+    }
+}
+
+.picture-cat {
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 3px;
+}
+
+.image {
+    object-fit: cover;
+    padding: 3px; 
+}
+
+.bio-cat {
+    line-height: 1.2;
+    float: right;
+    margin-left: 5px;
+    width: 45%;
+}
+
+.name-cat {    
+    font-size: 16px;
+    margin-top: 4px;
+    
+}
+
+.info-cat {
+    font-size: 12px;
+}
+
+.detailed-info {
+    font-size: 12px;
+    width: 100%;    
+    padding-left: 5px;
+    float:inline-end;
+    border-top: 1px solid rgba(0, 0, 0, 0.267);
+}
+
+.aside {
+    width: 25%;
+    order: 2;
+    float: right;
+    width: 230px;
+    height: 450px;
+    margin-right: 20px;
+    margin-left: 25px;
+}
+
+.age-cat {
+    margin-bottom: 25px;
+    padding-left: 3px;
+}
+
+.range-container {
+    max-width: 110px;
+    height: 1px;
+    background-color: rgb(194, 219, 228);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.range-thumb {
+    width: 10px;
+    height: 10px;
+    background-color: #e3eed9;
+    border: 1px solid rgba(99, 110, 109, 0.297);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.range-thumb:first-of-type {
+    left: 25px;
+}
+
+.range-thumb:last-of-type {
+    right: 1px;
+}
+
+.span-age {
+    font-size: 12px;
+    margin: 10px;
+}
+
+.type-cat {
+    padding-left: 7px;
+}
+
+.aside-heading {
+    font-size: 16px;
+    margin-top: 4px;
+    padding-left: 8px;
+}
+
+.container {
+    margin-top: 2px;
+    padding: 5px; 
+}
+
+.filter {
+    font-size: 12px;
+    border: 2px solid rgba(99, 110, 109, 0.297);
+    border-radius: 3px;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.link-cat {
+    display: block;
+    color: black;
+    text-decoration: none;
+    width: 250px; 
+    padding: 7px;
+}
+
+.footer [href] {
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;  
+    padding: 5px;
+    background-color: white;
+    font-size: 14px;
+    border: 1px solid rgba(81, 79, 79, 0.1);
+}
+
+.footer-left {    
+    width: 50%;
+    order: 1;
+    text-align: left;
+}
+  
+.footer-right {
+    width: 50%;
+    order: 2;
+    text-align: right;
+}
+
+ .not-type,
+.devon-rex,
+.sphinx,
+.siberian,
+.reset-settings
+{
+    display: none;
+}
+
+.not-type:checked ~ .aside #filter-not {
+    border: 2px solid #99d959;
+    background-color: #99d9593d;
+}
+
+.devon-rex:checked ~ .aside #filter-devonrex {
+    border: 2px solid #99d959;
+    background-color: #99d9593d;
+}
+
+.siberian:checked ~ .aside #filter-siberian {
+    border: 2px solid #99d959;
+    background-color: #99d9593d;
+}
+
+.sphinx:checked ~ .aside #filter-sphinx {
+    border: 2px solid #99d959;
+    background-color: #99d9593d;
+}
+
+
+.sphinx:checked ~ .wrapped .cats:not(#type-sphinx) {
+    display: none;    
+}
+
+.not-type:checked ~ .wrapped .cats:not(#type-none) {
+    display: none;    
+}
+
+.devon-rex:checked ~ .wrapped .cats:not(#type-devon-rex) {
+    display: none;    
+}
+
+.siberian:checked ~ .wrapped .cats:not(#type-siberian) {
+    display: none;    
+}
+
+.reset-settings:checked ~ .wrapped .cats {
+    display: block;
+}
+
+.link-cat-last {
+    font-size: 14px;
+    padding: 5px;
+    float: right;
+    color: rgba(99, 110, 109, 0.152);
+}
+
+.footer-ordinary {
+    display: none;
+}
+
+
+@media (min-width: 375px)  {
+    .aside {
+        width: 0;
+        display: none;
+    }
+    
+    .footer-extended {
+        display: none;
+    }
+
+    .detailed-info {
+        display: none;
+    }
+        
+    .footer-ordinary {
+        display: block;
+
+        &::first-line {
+            color: rgb(127, 131, 131);
+        }
+    }
+
+    .footer {
+        font-size: 14px;
+        display: flex; 
+        flex-wrap: wrap;
+        padding: 0;
+        padding-left: 5px;
+    }
+
+    .footer-left {
+        text-align: left;
+        width: 100%;
+    }
+
+    .footer-right {
+        text-align: left;
+        width: 100%;
+    }
+
+    .wrapped {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        place-self: center;
+        align-items: center;
+        gap: 25px;
+        padding-bottom: 15px;        
+    }
+
+    .cats {
+        width: 100%;
+        height: 100%;
+    }
+
+    .name-cat {    
+        margin-top: 4px;        
+    }
+    
+    .info-cat {
+        max-width: 100%;
+    }
+
+    .bio-cat {
+        line-height: 1.2;
+        width: 100%;
+        float: left;
+    }
+
+    .picture-cat {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .image {
+        padding: 0;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }    
+}
+
+@media (min-width: 730px) {
+    .aside {
+        width: 0;
+        display: none;
+    }
+    
+    .footer-extended {
+        display: none;
+    }
+
+    .detailed-info {
+        display: none;
+    }
+        
+    .footer-ordinary {
+        display: block;
+
+        &::first-line {
+            color: rgb(127, 131, 131);
+        }
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 0;
+        padding-left: 5px;
+    }
+
+    .footer-left {
+        text-align: left;
+        width: 50%;
+    }
+
+    .footer-right {
+        text-align: right;
+        width: 50%;
+    }
+
+    .wrapped {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        place-self: center;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+        padding-right: 10px;
+        padding-bottom: 15px;
+    }
+
+    .cats {
+        width: 100%;
+        height: 100%;
+    }
+
+    .name-cat {    
+        margin-top: 4px;
+    }
+    
+    .info-cat {
+        max-width: 100%;
+    }
+
+    .bio-cat {
+        line-height: 1.2;
+        width: 100%;
+        float: left;
+    }
+
+    .picture-cat {
+        width: 100%;
+        text-align: center;
+        inset: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .image {
+        padding: 0;
+        width: 100%;
+        height: 80%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .aside {
+        width: 25%;
+        display: block;
+        float: right;
+        order: 2;
+        margin-top: 20px;
+        position: sticky;
+        top: 0;
+    }
+    
+    .footer-extended {
+        display: block;
+    }
+
+    .detailed-info {
+        display: block;
+        font-size: 14px;        
+        border-top: 1px solid rgba(0, 0, 0, 0.267);
+        width: 100%;
+        padding-left: 0;
+    }
+        
+    .footer-ordinary {
+        display: none;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding-left: 5px;
+    }
+
+    .footer-left {
+        text-align: left;
+        width: 50%;
+    }
+
+    .footer-right {
+        text-align: right;
+        width: 50%;
+    }
+
+    .wrapped {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        order: 1;
+        float: left;
+        margin-left: 1%;
+        width: 75%;
+        padding-bottom: 15px;
+    }
+
+    .cats {
+        width: 1fr;
+    }
+
+    .name-cat {    
+        margin-top: 4px;
+        font-size: 18px;
+        
+    }
+    
+    .info-cat {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .bio-cat {
+        line-height: 1.2;
+        padding-top: 10px;
+        width: 30%;
+        float: right;
+        padding-right: 8px;
+    }
+
+    .picture-cat {
+        width: 65%;
+        float: left;
+        padding: 5px;
+        margin: 0;
+    }
+    
+    .image {
+        width: 280px;
+        height: 212px;
+        object-fit: cover; 
+    }
+
+    .age-cat {
+        font-size: 16px;
+    }
+
+    .aside-heading {
+        font-size: 18px;
+        padding-top: 8px;
+    }
+
+    .filter,
+    .span-age {
+        font-size: 14px;
+    }
+
+    .detailed-info-text {
+        padding: 5px;
+    }
+}
