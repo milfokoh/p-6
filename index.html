@@ -2,8 +2,238 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Задача «Мурмаркет для всех»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header class="header">
+        Мурмаркет
+    </header>
+    <main>        
+        <input type="radio"  id="sphinx" class="sphinx" name="cats"/>
+        <input type="radio"  id="devon-rex" class="devon-rex" name="cats"/>
+        <input type="radio" id="siberian" class="siberian" name="cats"/>
+        <input type="radio" id="not-type" class="not-type" name="cats"/>
+        <input type="radio" id="reset-settings" class="reset-settings" name="cats"/>
+
+        <div class="wrapped">
+            <section class="cats" id="type-none">
+                <div class="picture-cat">
+                    <img class="image" src="https://60.img.avito.st/image/1/1.lgh-Bba4OuFIsrjsXnPvQgCnOOfApLj3SKk4486sMuvI.wx7SwCUT-9xGg8-qYzXakfMiLI9EC2YFqrRoq_t5YrU" alt="Белладонна">
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Белладонна</h3>
+                   <p class="info-cat">Возраст: 4 года<br>
+                    Порода: нет<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Она очень ласковая, спокойная, первое время может быть осторожной с незнакомыми людьми.</p>
+                </div>
+            </section>
+
+            <section class="cats" id="type-sphinx">
+                <div class="picture-cat">
+                    <img class="image" src="https://40.img.avito.st/image/1/1.8bvdcLa4XVLr2Z9Xsz-rkqPSX1Rj0d9aq9RfUG3ZVVhr.LTq2cPBVtWMByqrZ8VEuMgMlrZXMsC3eR7AFVIuh_ng" >
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Фрося</h3>
+                   <p class="info-cat">Возраст: 8 месяцев<br>
+                    Порода: Сфинкс<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Котик легко находит общий язык с детьми и другими животными, поэтому станет отличным компаньоном для всей семьи.</p>
+                </div>
+            </section>
+            
+            <section class="cats" id="type-none">
+                <div class="picture-cat">
+                    <img class="image" src="https://10.img.avito.st/image/1/1.VqTMBLa4-k36s3hA7DlK9LKm-EtypXhb-qj4T3yt8kd6.tNW7okqdQjRUXceTZO4-7gx17QpTYRWwnDifd3l04-I" alt="kotiklecsys">
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Лексус</h3>
+                   <p class="info-cat">Возраст: 1,5 года<br>
+                    Порода: нет<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Лексус – озорной, любопытный, невероятно общительный, везде сует свой нос.</p>
+                </div>
+            </section>
+
+            <section class="cats" id="type-siberian">
+                <div class="picture-cat">
+                    <img class="image" src="https://good-veterinar.ru/wp-content/uploads/4/c/0/4c0aa3ac6ee19129b6dc024dadb7e498.jpeg">
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Алекс</h3>
+                   <p class="info-cat">Возраст: 1 год<br>
+                    Порода: Сибирская<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Взгляните в эти чарующие изумрудные глазки, как они прекрасны и сколько в них надежды на то, что в жизни скоро появятся светлые люди.</p>
+                </div>
+            </section>
+
+            <section class="cats" id="type-devon-rex">
+                <div class="picture-cat">
+                    <img class="image" src="https://good-veterinar.ru/wp-content/uploads/0/e/6/0e626e8181a9c6d01c58350bfb39c2b0.jpeg">
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Луна</h3>
+                   <p class="info-cat">Возраст: 2 года<br>
+                    Порода: Девон-рекс<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Луна игрива, как котенок, у нее хороший аппетит, не доставит проблем по части большого количества шерсти.</p>
+                </div>
+            </section>
+
+            <section class="cats" id="type-none">
+                <div class="picture-cat">
+                    <img class="image" src="https://70.img.avito.st/image/1/1.-ikMpra4VsA6EdTNdN38CHIEVMayB9TWOgpUwrwPXsq6.vVwav8ixg1mUIigtuA0cERGF1y-XUPR32aGqSkzcXD4" >
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Марли</h3>
+                   <p class="info-cat">Возраст: 10 месяцев<br>
+                    Порода: нет<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Марли очень дружелюбный. Он обожает забираться в кровати под одеяло.</p>
+                </div>
+            </section>
+
+            <section class="cats" id="type-devon-rex">
+                <div class="picture-cat">
+                    <img class="image" src="https://20.img.avito.st/image/1/1.ZvaPfba4yh-5ykgSz0xos_7fyBkx3EgJudHIHT_UwhU5.Jc5Ks8UrkXuZzn_4zI12_pdypvakfpUFdmE5XBrvAAk">
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Дженнифер</h3>
+                   <p class="info-cat">Возраст: 1 год<br>
+                    Порода: Девон-рекс<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Девочка с очаровательными глазками, немного скромная, очень любознательная и общительная.</p>
+                </div>
+            </section>
+
+            <section class="cats" id="type-none">
+                <div class="picture-cat">
+                    <img class="image" src=" https://90.img.avito.st/image/1/1.56sDLLa4S0I1hYlHQWfWin2OSUS9jclKdYhJQLOFQ0i1.vlBUe8NSz0axZPpzjXHub3YET7Bd7c5VgBJOmA5MECI" >
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Маня</h3>
+                   <p class="info-cat">Возраст: 2 года<br>
+                    Порода: нет<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Любит, когда ее гладят, мурчит, как котенок, в ответ и подставляет животик, делает массаж лапками, любит играть в мышки.</p>
+                </div>
+            </section>
+
+            <section class="cats" id="type-siberian">
+                <div class="picture-cat">
+                    <img class="image" src="https://10.img.avito.st/image/1/1.Mx3apLa4n_TsDV3xsLwpOtwGnfJkBR38rACd9moNl_5s.BdyBKtw1hPmP268RhSaU1MjlMV2RoOAdWWVYWLH6TKY">
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Пуговка-кнопка</h3>
+                   <p class="info-cat">Возраст: 1 год<br>
+                    Порода: Сибирская<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Очаровательная девочка с перчинкой! А характер просто замечательный, без всякого там перца, разве что с изюминкой, сладкой такой.</p>
+                </div>
+            </section>
+
+            <section class="cats" id="type-none">
+                <div class="picture-cat">
+                    <img class="image" src="https://10.img.avito.st/image/1/1.b6Yi_ra4w08USUFCcJNZ7lxcwUmcX0FZFFLBTZJXy0WU.7W13sMTZsZJX66cTV8IhC0EOP_V4mdIyYs07Sqha3QQ" >
+                </div>
+                <div class="bio-cat">
+                   <h3 class="name-cat">Ваня</h3>
+                   <p class="info-cat">Возраст: 10 месяцев<br>
+                    Порода: нет<br>
+                    Болезни: нет<br><br>
+                    Статус: ищет хозяина
+                    </p>
+                </div>
+                <div class="detailed-info">
+                    <p class="detailed-info-text">Ваня ласковый и контактный котенок. Он в меру игривый, ненавязчивый, ладит как с сородичами, так и с собаками.</p>
+                </div>
+            </section>   
+        </div>
+
+        <aside class="aside">
+            <div class="age-cat">
+                <p class="aside-heading">Возраст</p>
+                <div class="range-container">
+                    <div class="range-thumb"></div>
+                    <div class="range-thumb"></div>
+                </div>
+                <span class="span-age">от 2 до 5</span>
+            </div>
+            <div class="type-cat">
+                <p class="aside-heading">Порода</p>
+                <div class="container">
+                    <div class="filter" id="filter-sphinx">
+                        <label for="sphinx" class="link-cat">сфинкс</label>
+                    </div>
+                    <div class="filter" id="filter-devonrex">
+                        <label for="devon-rex" class="link-cat">девон-рекс</label>
+                    </div>
+                    <div class="filter" id="filter-siberian">
+                        <label for="siberian" class="link-cat">сибирская</label>
+                    </div>
+                    <div class="filter" id="filter-not">
+                        <label for="not-type" class="link-cat">нет</label>
+                    </div>
+                </div>
+            </div>
+            <label for="reset-settings" class="link-cat-last">Сбросить фильтр</label>
+        </aside>
+
+    </main>
+    <footer class="footer">
+        <div  class="footer-left">
+            <p class="footer-ordinary">
+                Напишите нам: <br>
+                ✉︎ <a href="cats@babuli.ru">cats@babuli.ru</a><br>
+                ✉︎ <a href="vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+            </p>
+            <p class="footer-extended">
+                ✉︎ Напишите нам: 
+                <a href="cats@babuli.ru">cats@babuli.ru</a> ● <a href="vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+            </p>
+        </div>
+        <div class="footer-right">
+            <p>© 2024 OOO «<a href="https://github.com/milfokoh/p-5">Бабушкины котятки</a>»</p>
+        </div>   
+    </footer>
 </body>
 </html>
